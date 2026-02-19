@@ -1,0 +1,104 @@
+/* ✅ MASTER LAYOUT */
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ✅ SIDEBAR (LOCKED WIDTH — NEVER SHRINKS) */
+.sidebar {
+    width: 260px;          /* FIXED WIDTH */
+    min-width: 260px;      /* PREVENT SHRINK */
+    background: #004F68;
+    padding: 20px;
+}
+
+/* Sidebar Links */
+.sidebar .nav-link {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.sidebar .nav-link.active {
+    background: #BF0603;
+    border-radius: 10px;
+}
+
+/* ✅ MAIN CONTENT */
+.main-content {
+    flex: 1;
+    background: #f5f5f5;
+    padding: 10px;
+}
+
+/* ✅ STATS LAYOUT */
+.stats-wrapper {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Cards */
+.stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 15px;
+    flex: 1;
+    min-width: 220px;
+}
+
+/* Profile */
+.profile-card {
+    text-align: center;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Button */
+.prof-btn {
+    border: none;
+    background: black;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* Stat Row */
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+}
+
+/* Colors */
+.bg-cont-2 { background: #ffffff; }
+.bg-cont-3 { background: #ffffff; }
+.bg-cont-4 { background: #ffffff; }
+.bg-cont-5 { background: #ffffff; }
+
+.det-text {
+    color: #6E6E6E;
+}
+
+/* ✅ MOBILE FIX */
+@media (max-width: 768px) {
+
+    /* Sidebar stays SAME SIZE */
+    .sidebar {
+        width: 260px;
+        min-width: 260px;
+    }
+
+    /* ONLY content stacks */
+    .stats-wrapper {
+        flex-direction: column;
+    }
+}

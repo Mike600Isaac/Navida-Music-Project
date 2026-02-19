@@ -8,6 +8,7 @@
     --primary-color: #CC0135;
     --text-color: #6E6E6E;
      --white: #ffffff;
+    --bg-col: #FFE3EA;
 }
 
 
@@ -41,7 +42,24 @@
     text-decoration: none;
     font-weight: 500;
     font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 0 0 9px 20px;
+
+
 }
+
+.a-style span {
+    white-space: nowrap;
+}
+
+.a-style img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
 
 .form-sty {
     display: block;
@@ -103,7 +121,220 @@
 }
 
 
-.l-dashboard {
+/* .l-dashboard {
     background-color: #FFFBFC;
-    height: 100vh;
+
 }
+.bg {
+    background-color: var(--bg-col);
+}
+.prof-btn {
+    border: 1px var(--primary-color) solid;
+    color: var(--primary-color);
+    padding: 1px 0;
+    border-radius: 50px;
+    background-color: var(--white);
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.prof-btn:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+.bg-cont-2 {
+    background-color: #D62F5B;
+    color: var(--white);
+}
+.det-text {
+    font-family: 'Tinos', serif;
+    font-style: italic;
+    font-size: 20px;
+}
+.bg-cont-3 {
+    background-color: #E6BD00;
+    color: var(--white);
+}
+.bg-cont-4 {
+    background-color: #00B0E6;
+    color: var(--white);
+}
+.bg-cont-5 {
+    background-color: #7B14CC;
+    color: var(--white);
+} */
+
+
+:root {
+    --sidebar-bg: #004F68;
+    --primary-color: #BF0603;
+    --muted-color: #6E6E6E;
+    --white: #FFFFFF;
+    --bg-col: #F5F7FA;
+}
+
+/* Page Background */
+.bg {
+    background-color: var(--bg-col);
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.l-dashboard {
+    background-color: var(--sidebar-bg);
+    color: var(--white);
+    min-height: 100vh;
+    padding-left: 20px;
+}
+
+/* Sidebar Links */
+.a-style {
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.a-style:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    transform: translateX(4px);
+}
+
+/* Sidebar Divider */
+.l-dashboard hr {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content Area */
+.col-md-10 {
+    padding: 25px;
+}
+
+/* ===== PROFILE CARD ===== */
+.profile-card {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    height: 100%;
+}
+
+/* Welcome Text */
+.profile-card span {
+    font-weight: 600;
+    color: var(--muted-color);
+}
+
+/* Profile Button */
+.prof-btn {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 6px 0;
+    border-radius: 50px;
+    background-color: var(--white);
+    font-size: 13px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.prof-btn:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+/* ===== STAT CARDS ===== */
+.bg-cont-2,
+.bg-cont-3,
+.bg-cont-4,
+.bg-cont-5 {
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    height: 100%;
+}
+
+/* Card Colors */
+.bg-cont-2 {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.bg-cont-3 {
+    background-color: #E6BD00;
+    color: var(--white);
+}
+
+.bg-cont-4 {
+    background-color: #00B0E6;
+    color: var(--white);
+}
+
+.bg-cont-5 {
+    background-color: #7B14CC;
+    color: var(--white);
+}
+
+/* Card Titles */
+.det-text {
+    font-family: 'Tinos', serif;
+    font-style: italic;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Big Numbers */
+.fs-1 {
+    font-weight: 700;
+}
+
+/* Icons Alignment Fix */
+.bg-cont-2 img,
+.bg-cont-3 img,
+.bg-cont-4 img,
+.bg-cont-5 img {
+    width: 28px;
+}
+
+/* Responsive Polish */
+@media (max-width: 768px) {
+
+    .l-dashboard {
+        min-height: auto;
+    }
+
+    .profile-card,
+    .bg-cont-2,
+    .bg-cont-3,
+    .bg-cont-4,
+    .bg-cont-5 {
+        margin-bottom: 15px;
+    }
+}
+
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ✅ Sidebar NEVER shrinks */
+.sidebar {
+    width: 240px;
+    min-width: 240px;
+    background-color: #FFFBFC;
+    padding: 15px;
+}
+
+/* ✅ Content takes remaining space */
+.content {
+    flex: 1;
+    background-color: #f5f6fa;
+    padding: 10px;
+}
+
+
+
